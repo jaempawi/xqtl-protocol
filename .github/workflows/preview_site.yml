@@ -1,0 +1,33 @@
+name: Preview website (fork only)
+
+# Builds the site from this branch and publishes it to this fork's GitHub Pages
+# (gh-pages branch), e.g. https://<user>.github.io/xqtl-protocol/. Not for StatFunGen.
+on:
+  push:
+    branches: [site-preview]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  preview:
+    if: github.repository != 'StatFunGen/xqtl-protocol'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: prefix-dev/setup-pixi@v0.11.3
+        with:
+          run-install: false
+      - name: Build and publish the preview
+        shell: pixi exec --spec jupyter-book --spec ghp-import --spec nbconvert -- bash -e {0}
+        env:
+          XQTL_SITE_URL: https://${{ github.repository_owner }}.github.io/xqtl-protocol
+        run: |
+          python website/build_support.py --stage-widget
+          BASE_URL=/xqtl-protocol jupyter-book build --html
+          python website/build_support.py --widget _build/html --redirects _build/html
+          touch _build/html/.nojekyll
+          ghp-import -n -p -f _build/html
