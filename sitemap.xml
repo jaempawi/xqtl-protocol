@@ -5,25 +5,7 @@
     <loc>http://pre.render</loc>
   </url>
   <url>
-    <loc>http://pre.render/xqtl-protocol-demo</loc>
-  </url>
-  <url>
     <loc>http://pre.render/xqtl-protocol-workflow-builder</loc>
-  </url>
-  <url>
-    <loc>http://pre.render/own-data</loc>
-  </url>
-  <url>
-    <loc>http://pre.render/running-on-a-cluster</loc>
-  </url>
-  <url>
-    <loc>http://pre.render/reference-data-sources</loc>
-  </url>
-  <url>
-    <loc>http://pre.render/methods-and-references</loc>
-  </url>
-  <url>
-    <loc>http://pre.render/glossary</loc>
   </url>
   <url>
     <loc>http://pre.render/reference-data</loc>

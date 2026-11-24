@@ -29,7 +29,7 @@ export default {
 var R = (typeof XQB_ROOT !== 'undefined' && XQB_ROOT) || document;
 var WIDGET = R !== document;
 var XQB_DATA = JSON.parse(R.getElementById('xqb-data').textContent);
-var REV = 'e6d32fefd87f7e713cf3b85237a95673cd566c16'.indexOf('__') === 0 ? 'unreleased' : 'e6d32fefd87f7e713cf3b85237a95673cd566c16';
+var REV = 'acabd64905b4fbc351baae80c08422e3bca7c869'.indexOf('__') === 0 ? 'unreleased' : 'acabd64905b4fbc351baae80c08422e3bca7c869';
 
 /* ---- Rendering: a small renderer for the template's {{path}}, sc-for and sc-if ---- */
 var EVENTS = { onclick: 'click', onchange: 'change', oninput: 'input' };
@@ -80,7 +80,7 @@ function copyToClipboard(text, done) {
 }
 
 /* ---- Content and route logic (from the approved design) ---- */
-var BASE = 'https://statfungen.github.io/xqtl-protocol/';
+var BASE = 'https://jaempawi.github.io/xqtl-protocol/';
 var DOC = {"reference_data_preparation":"reference-data-preparation","generalized_TADB":"generalized-tadb","ld_prune_reference":"ld-prune-reference","rss_ld_sketch":"rss-ld-sketch","RNA_calling":"rna-calling","bulk_expression_QC":"bulk-expression-qc","bulk_expression_normalization":"bulk-expression-normalization","snRNAseq_preprocessing":"snrnaseq-preprocessing","pseudobulk_preprocessing":"pseudobulk-preprocessing","splicing_calling":"splicing-calling","splicing_calling_leafcutter2":"splicing-calling-leafcutter2","isoform_calling_torino":"isoform-calling-torino","splicing_normalization":"splicing-normalization","methylation_calling":"methylation-calling","apa_calling":"apa-calling","apa_impute":"apa-impute","VCF_QC":"vcf-qc","genotype_formatting":"genotype-formatting","GWAS_QC":"gwas-qc","PCA":"pca","gene_annotation":"gene-annotation","phenotype_imputation":"phenotype-imputation","phenotype_formatting":"phenotype-formatting","covariate_formatting":"covariate-formatting","covariate_hidden_factor":"covariate-hidden-factor","TensorQTL":"tensorqtl","qr_and_twas":"qr-and-twas","qtl_association_postprocessing":"qtl-association-postprocessing","mash_preprocessing":"mash-preprocessing","mixture_prior":"mixture-prior","mash_fit":"mash-fit","mash_posterior":"mash-posterior","mnm_regression":"mnm-regression","rss_analysis":"rss-analysis","qtl_rss_analysis":"qtl-rss-analysis","SuSiE_enloc":"susie-enloc","twas_ctwas":"twas-ctwas","colocboost":"colocboost","eoo_enrichment":"eoo-enrichment","gsea":"gsea","gregor":"gregor","sldsc_enrichment":"sldsc-enrichment","ems_training":"ems-training","ems_prediction":"ems-prediction","METAL":"metal","watershed":"watershed","mnm_postprocessing":"mnm-postprocessing","intact":"intact"};
 var CATALOG = [
   ['Reference data', 'Genome, annotation and LD panels every later stage uses', [['reference_data_preparation','Reference Preparation','Download and standardize references'],['generalized_TADB','Generalized TADB','TAD boundary annotations'],['ld_prune_reference','LD Reference Pruning','Pruned LD reference panels'],['rss_ld_sketch','RSS LD Sketching','LD sketches for summary-statistic methods']]],
@@ -245,7 +245,7 @@ function nice(p) { var b = p.split('/').pop(); return b.replace(/^protocol_examp
 // A shareable link: mode, example, study settings, methods and where it runs, in the URL hash.
 // File paths are never put in the link.
 function shareState(s) { return { m: s.mode, e: s.example, s: s.study, x: s.methods, r: s.runOn }; }
-function shareUrl(s) { var base = 'https://statfungen.github.io/xqtl-protocol/xqtl_protocol_workflow_builder.html'; try { if (window.self === window.top && location.protocol.indexOf('http') === 0) base = location.href.split('#')[0]; } catch (e) {} return base + '#b=' + encodeURIComponent(JSON.stringify(shareState(s))); }
+function shareUrl(s) { var base = 'https://jaempawi.github.io/xqtl-protocol/xqtl_protocol_workflow_builder.html'; try { if (window.self === window.top && location.protocol.indexOf('http') === 0) base = location.href.split('#')[0]; } catch (e) {} return base + '#b=' + encodeURIComponent(JSON.stringify(shareState(s))); }
 function readShared() {
   try { var h = (location.hash || '').match(/[#&]b=([^&]+)/); if (!h) return null; var o = JSON.parse(decodeURIComponent(h[1]));
     if (!o || typeof o !== 'object') return null;

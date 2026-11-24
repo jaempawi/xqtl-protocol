@@ -28,8 +28,8 @@ html.dark body article p, html.dark body article li { color: #d5dde4; }
 .fx-partners a { display: inline-flex; align-items: center; height: 56px; padding: 0; background: transparent; border: 0; }
 .fx-partners img { display: block; width: auto; margin: 0; }
 /* FunGen-xQTL sites in the top bar: this site in the logo blue and underlined, as on the Resources site and the Explorer */
-.myst-top-nav-item a[href^="https://statfungen.github.io/xqtl-protocol"] { color: #3d6289; box-shadow: inset 0 -2px 0 #3d6289; }
-html.dark .myst-top-nav-item a[href^="https://statfungen.github.io/xqtl-protocol"] { color: #8fb0d0; box-shadow: inset 0 -2px 0 #8fb0d0; }
+.myst-top-nav-item a[href^="https://jaempawi.github.io/xqtl-protocol"] { color: #3d6289; box-shadow: inset 0 -2px 0 #3d6289; }
+html.dark .myst-top-nav-item a[href^="https://jaempawi.github.io/xqtl-protocol"] { color: #8fb0d0; box-shadow: inset 0 -2px 0 #8fb0d0; }
 /* Shared heading scale must win over the theme's utility classes (text-3xl and the like), so these
    selectors carry an id-level :not() and also target the frontmatter title block */
 html body article h1:not(#_), html body .myst-fm-block-title:not(#_) { font: 700 32px/1.2 'Figtree', system-ui, sans-serif; letter-spacing: -.015em; color: #19354a; }
