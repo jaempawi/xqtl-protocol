@@ -30,7 +30,8 @@ jobs:
         run: |
           export GITHUB_SHA="$(git rev-parse HEAD)"
           python website/build_support.py --stage-widget
-          BASE_URL=/xqtl-protocol jupyter-book build --html
+          npm install --global mystmd@1.13.0
+          BASE_URL=/xqtl-protocol myst build --html
           python website/build_support.py --widget _build/html --redirects _build/html
           # Keep navigation and builder links inside the fork preview.
           python - <<'PY'
