@@ -29,7 +29,7 @@ export default {
 var R = (typeof XQB_ROOT !== 'undefined' && XQB_ROOT) || document;
 var WIDGET = R !== document;
 var XQB_DATA = JSON.parse(R.getElementById('xqb-data').textContent);
-var REV = '227a27eac90e6501d51ed474ece6560f7df5cc3a'.indexOf('__') === 0 ? 'unreleased' : '227a27eac90e6501d51ed474ece6560f7df5cc3a';
+var REV = '5272273aa1e97a82b2f34371d8dccd154e5251e5'.indexOf('__') === 0 ? 'unreleased' : '5272273aa1e97a82b2f34371d8dccd154e5251e5';
 
 /* ---- Rendering: a small renderer for the template's {{path}}, sc-for and sc-if ---- */
 var EVENTS = { onclick: 'click', onchange: 'change', oninput: 'input' };
