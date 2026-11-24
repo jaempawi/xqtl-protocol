@@ -19,7 +19,7 @@ jobs:
         with:
           fetch-depth: 0
           # Combined PR #1446, pinned for a reproducible preview.
-          ref: acabd64905b4fbc351baae80c08422e3bca7c869
+          ref: 4dd85b98630a8766df8aa71861bc757f3c9348ec
       - uses: prefix-dev/setup-pixi@v0.11.3
         with:
           run-install: false
