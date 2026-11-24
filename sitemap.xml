@@ -211,4 +211,13 @@
   <url>
     <loc>http://pre.render/about</loc>
   </url>
+  <url>
+    <loc>http://pre.render/reference-data-sources</loc>
+  </url>
+  <url>
+    <loc>http://pre.render/methods-and-references</loc>
+  </url>
+  <url>
+    <loc>http://pre.render/glossary</loc>
+  </url>
 </urlset>
