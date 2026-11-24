@@ -1,5 +1,5 @@
 ---
-title: About
+title: About & Reference
 ---
 
 The FunGen-xQTL Computational Protocol is developed for the NIH/NIA Alzheimer's
@@ -8,6 +8,12 @@ by its Analysis Working Group. It collects the pipelines the consortium uses to 
 molecular QTL across brain tissues and cell types and to connect them to Alzheimer's
 disease genetics, written so that other studies can run the same analyses on their
 own data.
+
+## Protocol reference
+
+- [Where to get reference data](reference_data_sources.md): genome, annotation and LD reference sources.
+- [Methods and references](methods_and_references.md): the methods used by each module and the papers to cite.
+- [Glossary](glossary.md): definitions of the terms used throughout the protocol.
 
 ## Related FunGen-xQTL sites
 
